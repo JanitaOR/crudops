@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": "user_1",
+      "name": "Anna Olsen",
+      "medicines": ["um_1", "um_2"]
+    }
+  ],
+  "medicines": [
+    {
+      "id": "med_1",
+      "name": "Paracetamol",
+      "description": "Pain relief and fever reducer",
+      "importantInformation": "Do not exceed recommended dose",
+      "form": "tablet"
+    },
+    {
+      "id": "med_2",
+      "name": "Ventoline",
+      "description": "Asthma relief inhaler",
+      "importantInformation": "Use during asthma attacks",
+      "form": "inhalation"
+    }
+  ],
+  "userMedicines": [
+    {
+      "id": "um_1",
+      "userId": "user_1",
+      "medicineId": "med_1",
+
+      "dosageSchedule": [
+        {
+          "timeOfDay": "morning",
+          "enabled": true,
+          "time": "08:00"
+        },
+        {
+          "timeOfDay": "evening",
+          "enabled": true,
+          "time": "20:00"
+        }
+      ],
+
+      "asNeeded": false,
+      "isTreatmentCourse": false,
+
+      "alarmEnabled": true,
+
+      "notes": "Take with food"
+    },
+
+    {
+      "id": "um_2",
+      "userId": "user_1",
+      "medicineId": "med_2",
+
+      "dosageSchedule": [
+        {
+          "timeOfDay": "morning",
+          "enabled": true,
+          "time": "08:00"
+        }
+      ],
+
+      "asNeeded": true,
+      "isTreatmentCourse": false,
+
+      "alarmEnabled": true,
+
+      "notes": "Use when needed during asthma symptoms"
+    }
+  ]
+}
